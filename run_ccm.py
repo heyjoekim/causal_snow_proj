@@ -16,8 +16,8 @@ def runCCM(clim, i, j, tau):
     ed2 = d2[d2['rho'] == d2['rho'].max()]['E'].item()
 
     # run ccm
-    result = CCM(dataFrame = ,
-                 E=,
+    result = CCM(dataFrame = df,
+                 E=ed1,
                  tau=-1,
                  columns='',
                  target='',
