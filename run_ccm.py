@@ -3,10 +3,14 @@ import sys
 import pandas as pd
 import xarray as xr
 from pyEDM import *
-
+import argparse
+import json
 
 def runCCM(clim, i, j, tau):
-    
+    if clim == 'SST':
+        clim_df = xr.open_dataset('./data/')
+    swe_df = ''
+    clim_df = clim
     df = swe_m_anom.join(sst_m_anom)
     # find embedd dimensions
     d1 = EmbedDimension(dataFrame=df.reset_index(), lib="1 100", pred="201 500", columns='sst')
@@ -25,3 +29,16 @@ def runCCM(clim, i, j, tau):
                  sample=100,
                  showPlot=False)
     return()
+
+parser = argparse.ArgumentParser(description = 'Python Script to run CCM')
+parser.add_argument('clim', choices=['SST','SLP'], help='Climate data filename: SST or SLP')
+parser.add_argument('i', type=int, help='Integer i - for lat')
+parser.add_argument('j', type=int, help='Integer j - for lon')
+parser.add_argument('-t', '--tau', choices=[1,2,3], type=int, help='Lag variable')
+
+args = parser.parse_args()
+
+print('reading clim: {}'.format(args.clim))
+print('reading i: {}'.format(args.i))
+print('reading j: {}'.format(args.j))
+print('reading tau: {}'.format(args.tau))
