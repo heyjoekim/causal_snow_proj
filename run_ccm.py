@@ -5,10 +5,19 @@ import xarray as xr
 from pyEDM import *
 import argparse
 import json
+import glob
 
 def runCCM(clim, i, j, tau):
+    # determine which climate variable to 
     if clim == 'SST':
-        clim_df = xr.open_dataset('./data/')
+        clim_df = xr.open_dataset('./data/SST_anoms.nc')
+    if clim == 'SLP':
+        clim_df = xr.open_dataset('./data/SLP_anoms.nc')
+
+    # get lag values from tau var
+    t_dict = {1:1, 2:3, 3:6}
+    tau_val = t_dict.get(tau)
+
     swe_df = ''
     clim_df = clim
     df = swe_m_anom.join(sst_m_anom)
