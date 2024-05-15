@@ -98,9 +98,9 @@ parser.add_argument('-t', '--tau', choices=[1,2,3], type=int, help='Lag variable
 
 args = parser.parse_args()
 
-print('reading clim: {}'.format(args.clim))
-print('reading i: {}'.format(args.i))
-print('reading j: {}'.format(args.j))
-print('reading tau: {}'.format(args.tau))
+# print('reading clim: {}'.format(args.clim))
+# print('reading i: {}'.format(args.i))
+# print('reading j: {}'.format(args.j))
+# print('reading tau: {}'.format(args.tau))
 
 runCCM(args.clim, args.i, args.j, args.tau)
