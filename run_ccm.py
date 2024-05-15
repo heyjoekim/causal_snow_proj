@@ -6,7 +6,14 @@ from pyEDM import *
 import argparse
 import glob
 
-def runCCM(clim, i, j, tau):
+########################################################################
+# I would recommend making the function a separate script (i.e. treat
+# it like a python module that gets imported). This script will then
+# call the module and run the analyses. This will make for cleaner code if
+# we end up needing to do other analyses in the future. Just a 
+# recommendation though, don't feel like you ahve to do it.
+########################################################################
+def runCCM(clim=args.c, i=args.i, j=args.j, tau=tau_conversion[args.t]):
     # determine which climate variable to 
     if clim == 'SST':
         clim_xr = xr.open_dataset('./data/SST_anoms.nc')
@@ -86,21 +93,50 @@ def runCCM(clim, i, j, tau):
                             'lon': lons,
                             'lat': lats,
                             'rho':rhos})
+
+    # We'll need to change this in the future after we figure out the directory
+    # structure.
     results.to_csv('./outputs/{}/{}_lon_{}_lat_{}.csv'.format(clim, clim, i, j),
                    index=False)
     return()
 
-parser = argparse.ArgumentParser(description = 'Python Script to run CCM')
-parser.add_argument('clim', choices=['SST','SLP'], help='Climate data filename: SST or SLP')
-parser.add_argument('i', type=int, help='Integer i - for lat')
-parser.add_argument('j', type=int, help='Integer j - for lon')
-parser.add_argument('-t', '--tau', choices=[1,2,3], type=int, help='Lag variable')
+# Initialize the ArgumentParser object
+parser = argparse.ArgumentParser()
 
-args = parser.parse_args()
+# Add a positional argument
+parser.add_argument(
+    '-c',
+    help='The filename of the climate data to be analyzed.'
+)
+parser.add_argument(
+    '-i',
+    help='The index of the line of latitude to be analyzed.'
+)
+parser.add_argument(
+    '-j',
+    help='The index of the line of longitude to be analyzed.'
+)
+parser.add_argument(
+    '-t',
+    help='The index (ntau) of the line of lag (tau) to be analyzed (ntau:tau 0:1, 1:2, 3:6).'
+)
+parser.add_argument(
+    '--verbose',
+    dest='verbose',
+    default=False,
+    action='store_true',
+    help='Print i, j, n_tau, and tau to the console?'
+)
 
-# print('reading clim: {}'.format(args.clim))
-# print('reading i: {}'.format(args.i))
-# print('reading j: {}'.format(args.j))
-# print('reading tau: {}'.format(args.tau))
+# Dictionary to convert from ntau to tau values
+tau_conversion = {'0':1, '1':2, '2':6}
 
-runCCM(args.clim, args.i, args.j, args.tau)
+# Being explicit with the test and
+if args.verbose == True:
+    print(f"climate file: {args.c}")
+    print(f"nlat: {args.i}")
+    print(f"nlon: {args.j}")
+    print(f"ntau: {args.t}")
+    print(f"tau: {tau_conversion[args.t]}")
+
+runCCM(args.clim, args.i, args.j, args.tau_conversion[args.t])
