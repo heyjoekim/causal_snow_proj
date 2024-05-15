@@ -25,11 +25,11 @@ parser.add_argument(
     help='The filename of the climate data to be analyzed.'
 )
 parser.add_argument(
-    '-i',
+    '-i', type=int,
     help='The index of the line of latitude to be analyzed.'
 )
 parser.add_argument(
-    '-j',
+    '-j', type=int,
     help='The index of the line of longitude to be analyzed.'
 )
 parser.add_argument(
@@ -45,7 +45,9 @@ parser.add_argument(
 )
 
 # Dictionary to convert from ntau to tau values
-tau_conversion = {'0':1, '1':2, '2':6}
+tau_conversion = {'0':1, '1':3, '2':6}
+
+args = parser.parse_args()
 
 # Being explicit with the test and
 if args.verbose == True:
@@ -55,4 +57,4 @@ if args.verbose == True:
     print(f"ntau: {args.t}")
     print(f"tau: {tau_conversion[args.t]}")
 
-runCCM(args.clim, args.i, args.j, args.tau_conversion[args.t])
+runCCM(args.c, args.i, args.j, int(tau_conversion[args.t]))

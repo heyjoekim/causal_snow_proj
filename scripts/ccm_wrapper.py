@@ -56,14 +56,15 @@ def runCCM(clim, i, j, tau):
         ed2 = d2[d2['rho'] == d2['rho'].max()]['E'].item()
 
         # Max libSize must be less than N - (E+1)
-        maxN = df_len - (ed2+1)
+        maxN = df_len - (ed1+1)
+        # print(f, ed1, df_len, maxN)
         # run ccm
         CCMresult = CCM(dataFrame = df,
-                     E=int(ed2),
-                     tau=-tau_val,
+                     E=int(ed1),
+                     tau=-tau,
                      columns=var2,
                      target=var1,
-                     libSizes='10 {} 20'.format(maxN),
+                     libSizes='10 {} 25'.format(maxN-1),
                      sample=100,
                      showPlot=False)
         # if var is anchovy::sst, reads as sst influences anchovy
@@ -74,7 +75,7 @@ def runCCM(clim, i, j, tau):
         lons.append(lon)
         lats.append(lat)
         ecos.append(eco)
-        rhos.append(rho)
+        rhos.append(np.round(rho,3))
     
     # save results
     results = pd.DataFrame({'eco_region': ecos,
