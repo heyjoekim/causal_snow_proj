@@ -73,7 +73,6 @@ def runCCM(clim, i, j, tau):
         
         # print(f, ed1, df_len, maxN)
         # run ccm
-        
         CCMresult = CCM(
             dataFrame = df,
             E=int(ed1),
@@ -82,8 +81,8 @@ def runCCM(clim, i, j, tau):
             target=var1,
             libSizes=[10 , 25, maxN-1],
             sample=100,
-            showPlot=False
-            )
+            showPlot=False)
+
         # if var is anchovy::sst, reads as sst influences anchovy
         # get SST/SLP influence SWE
         rho = CCMresult['{}:{}'.format(var1, var2)].iloc[-1]
