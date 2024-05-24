@@ -64,7 +64,7 @@ def runCCM(clim, i, j, tau):
                      tau=-tau,
                      columns=var2,
                      target=var1,
-                     libSizes='10 {} 25'.format(maxN-1),
+                     libSizes=[10, maxN-1, 25],
                      sample=100,
                      showPlot=False)
         # if var is anchovy::sst, reads as sst influences anchovy
