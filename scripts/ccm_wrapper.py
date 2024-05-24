@@ -48,22 +48,20 @@ def runCCM(clim, i, j, tau):
 
         # find embedd dimensions
         d1 = EmbedDimension(
-            dataFrame=df,
-            lib=[1, 100],
-            pred=[201, df_len],
-            columns=var2,
-            target=var2,
-            showPlot=False
-            )
+                dataFrame=df,
+                lib=[1, 100],
+                pred=[201, df_len],
+                columns=var2,
+                target=var2,
+                showPlot=False)
 
         d2 = EmbedDimension(
-            dataFrame=df,
-            lib=[1, 100],
-            pred=[201, df_len],
-            columns=var1,
-            target=var1,
-            showPlot=False
-            )
+                dataFrame=df,
+                lib=[1, 100],
+                pred=[201, df_len],
+                columns=var1,
+                target=var1,
+                showPlot=False)
 
         ed1 = d1[d1['rho'] == d1['rho'].max()]['E'].item()
         ed2 = d2[d2['rho'] == d2['rho'].max()]['E'].item()
@@ -74,14 +72,14 @@ def runCCM(clim, i, j, tau):
         # print(f, ed1, df_len, maxN)
         # run ccm
         CCMresult = CCM(
-            dataFrame = df,
-            E=int(ed1),
-            tau=-tau,
-            columns=var2,
-            target=var1,
-            libSizes=[10 , 25, maxN-1],
-            sample=100,
-            showPlot=False)
+                dataFrame = df,
+                E=int(ed1),
+                tau=-tau,
+                columns=var2,
+                target=var1,
+                libSizes=[10, maxN-1, 25],
+                sample=100,
+                showPlot=False)
 
         # if var is anchovy::sst, reads as sst influences anchovy
         # get SST/SLP influence SWE

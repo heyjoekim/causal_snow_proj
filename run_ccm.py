@@ -57,4 +57,5 @@ if args.verbose == True:
     print(f"ntau: {args.t}")
     print(f"tau: {tau_conversion[args.t]}")
 
-runCCM(args.c, args.i, args.j, int(tau_conversion[args.t]))
+if __name__ == "__main__":
+    runCCM(args.c, args.i, args.j, int(tau_conversion[args.t]))
