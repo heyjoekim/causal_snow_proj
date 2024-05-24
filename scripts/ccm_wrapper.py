@@ -29,6 +29,7 @@ def runCCM(clim, i, j, tau):
         clim_df = clim_xr.isel(lon=i, lat=j).sst.to_dataframe().drop(['lon', 'lat'], axis=1)
         swe_df = swe_xr.swe_level2.mean(dim='sites').to_dataframe()
         df = swe_df.join(clim_df)
+        
         # save variable names
         var1 = df.columns[0]    # usually swe
         var2 = df.columns[1]    # should be SST or SLP
@@ -41,32 +42,47 @@ def runCCM(clim, i, j, tau):
         eco = swe_xr.swe_level2.attrs['eco_region']
 
         df_len = len(df)
-        # find embedd dimensions
-        d1 = EmbedDimension(dataFrame=df, lib="1 100",
-                            pred="201 {}".format(df_len),
-                            columns=var2,
-                            showPlot=False)
-        d2 = EmbedDimension(dataFrame=df, lib="1 100",
-                            pred="201 {}".format(df_len),
-                            columns=var1,
-                            showPlot=False)
 
+        # convert time to ISO-8601 as required by pyEDM
+        df['time'] = df['time'].map(lambda x: x.isoformat())
+
+        # find embedd dimensions
+        d1 = EmbedDimension(
+            dataFrame=df,
+            lib=[1, 100],
+            pred=[201, df_len],
+            columns=var2,
+            target=var2,
+            showPlot=False
+            )
+
+        d2 = EmbedDimension(
+            dataFrame=df,
+            lib=[1, 100],
+            pred=[201, df_len],
+            columns=var1,
+            target=var1,
+            showPlot=False
+            )
 
         ed1 = d1[d1['rho'] == d1['rho'].max()]['E'].item()
         ed2 = d2[d2['rho'] == d2['rho'].max()]['E'].item()
 
         # Max libSize must be less than N - (E+1)
-        maxN = df_len - (ed1+1)
+        maxN = df_len - (ed1 + 1)
+        
         # print(f, ed1, df_len, maxN)
         # run ccm
-        CCMresult = CCM(dataFrame = df,
-                     E=int(ed1),
-                     tau=-tau,
-                     columns=var2,
-                     target=var1,
-                     libSizes=[10, maxN-1, 25],
-                     sample=100,
-                     showPlot=False)
+        CCMresult = CCM(
+            dataFrame = df,
+            E=int(ed1),
+            tau=-tau,
+            columns=var2,
+            target=var1,
+            libSizes=[10 , 25, maxN-1],
+            sample=100,
+            showPlot=False)
+
         # if var is anchovy::sst, reads as sst influences anchovy
         # get SST/SLP influence SWE
         rho = CCMresult['{}:{}'.format(var1, var2)].iloc[-1]
