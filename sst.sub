@@ -1,0 +1,43 @@
+#########################################################################################
+# HTCondor Submit Description File.
+# Author: David Fastovich, dfastovi@syr.edu
+# Date: 5/9/2024
+# Source: https://research.iac.es/sieinvens/siepedia/pmwiki.php?n=HOWTOs.CondorSubmitFile
+#########################################################################################
+
+# File name
+FNAME = "SST"
+
+# nlat
+MAX_I = 20
+
+# nlon
+MAX_J = 40
+
+# ntau
+MAX_TAU = 3
+
+# Simulating a three level loop
+N = $(MAX_I) * $(MAX_J) * $(MAX_TAU)
+
+i   = ( $(Process) / ($(MAX_TAU)  * $(MAX_J)))
+j   = (($(Process) /  $(MAX_TAU)) % $(MAX_J))
+tau = ( $(Process) %  $(MAX_TAU))
+
+# Information that HTCondor actually needs to send to nodes
+executable = /home/hkim139/run_sst.sh
+# argument   = "-c $(FNAME) -i $INT(i) -j $INT(j) -t $INT(tau)"
+argument   = "-c SST -i 0 -j 0 -t 0"
+error      = cluster_err/$(FNAME).$INT(i).$INT(j).INT(K).err
+output     = cluster_out/$(FNAME).$INT(i).$INT(j).INT(K).out
+log        = cluster_log/$(FNAME).$INT(i).$INT(j).INT(K).log	
+
+# should_transfer_files = YES
+# transfer_input_files = data/
+
+# request_cpus = 2
+# request_memory = 8192MB
+# request_disk = 4096MB
+
+# queue $N
+queue 1

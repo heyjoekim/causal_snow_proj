@@ -8,9 +8,9 @@ import glob
 def runCCM(clim, i, j, tau):
     # determine which climate variable to 
     if clim == 'SST':
-        clim_xr = xr.open_dataset('./data/SST_anoms.nc')
+        clim_xr = xr.open_dataset('./data/SST_anoms.nc').sst
     if clim == 'SLP':
-        clim_xr = xr.open_dataset('./data/SLP_anoms.nc')
+        clim_xr = xr.open_dataset('./data/SLP_anoms.nc').slp
 
     # get list of swe netcdf files
     swe_files = np.sort(glob.glob('./data/snow_by_eco/*.nc'))
@@ -26,7 +26,7 @@ def runCCM(clim, i, j, tau):
         swe_xr = xr.open_dataset(f)
 
         # select lat/lon for climate xarray and save as df
-        clim_df = clim_xr.isel(lon=i, lat=j).sst.to_dataframe().drop(['lon', 'lat'], axis=1)
+        clim_df = clim_xr.isel(lon=i, lat=j).to_dataframe().drop(['lon', 'lat'], axis=1)
         swe_df = swe_xr.swe_level2.mean(dim='sites').to_dataframe()
         df = swe_df.join(clim_df)
         
@@ -77,7 +77,7 @@ def runCCM(clim, i, j, tau):
                 tau=-tau,
                 columns=var2,
                 target=var1,
-                libSizes=[10, maxN-1, 25],
+                libSizes=[15, maxN-1, 25],
                 sample=100,
                 showPlot=False)
 
@@ -95,10 +95,10 @@ def runCCM(clim, i, j, tau):
     results = pd.DataFrame({'eco_region': ecos,
                             'lon': lons,
                             'lat': lats,
-                            'rho':rhos})
+                            'rho': rhos})
 
     # We'll need to change this in the future after we figure out the directory
     # structure.
-    results.to_csv('./outputs/{}/{}_lon_{}_lat_{}.csv'.format(clim, clim, i, j),
+    results.to_csv('./outputs/{}/{}_lon_{}_lat_{}_tau_{}.csv'.format(clim, clim, i, j, tau),
                    index=False)
     return()
