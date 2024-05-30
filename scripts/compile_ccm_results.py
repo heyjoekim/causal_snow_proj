@@ -25,3 +25,9 @@ def read_ccm_outputs(clim, t):
     df_multind = df.set_index(['eco_region', 'lon', 'lat'])
     ccm_array = df_multind.to_xarray()
     return(ccm_array)
+
+
+def save_ccm(ccm_array, vars, path='./data/processed/'):
+    fname_str = 'ccm_{}_tau_{}.nc'.format(vars[0], vars[1])
+    ccm_array.to_netcdf(path+fname_str)
+    return()
