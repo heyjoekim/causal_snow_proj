@@ -2,6 +2,8 @@
 # HTCondor Submit Description File.
 # Author: David Fastovich, dfastovi@syr.edu
 # Date: 5/9/2024
+# Modified by: Haejo Kim, hkim139@syr.edu
+# Date, last modified: 5/30/2024
 # Source: https://research.iac.es/sieinvens/siepedia/pmwiki.php?n=HOWTOs.CondorSubmitFile
 #########################################################################################
 
@@ -9,10 +11,10 @@
 FNAME = SLP
 
 # nlon 
-MAX_I = 5
+MAX_I = 41
 
 # nlat
-MAX_J = 5
+MAX_J = 33
 
 # ntau
 MAX_TAU = 3
