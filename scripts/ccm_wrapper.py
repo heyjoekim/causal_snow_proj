@@ -34,7 +34,8 @@ def runCCM(clim, i, j, tau):
         lon = float(clim_xr.isel(lon=i).lon.values)
         lat = float(clim_xr.isel(lat=j).lat.values)
         eco = swe_xr.swe_level2.attrs['eco_region']
-       
+
+       # check for nan values for masked SST vals
         if clim_df.is_null().any().any():
             lons.append(lon)
             lats.append(lat)
