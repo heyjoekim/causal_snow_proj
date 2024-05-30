@@ -6,7 +6,7 @@
 #########################################################################################
 
 # File name
-FNAME = SST
+FNAME = SLP
 
 # nlon 
 MAX_I = 5
@@ -37,6 +37,9 @@ log         = /home/hkim139/causal_snow_proj/cluster_log/$(FNAME).$INT(i).$INT(j
 # output      = /home/hkim139/causal_snow_proj/cluster_out/SST.out
 # log         = /home/hkim139/causal_snow_proj/cluster_log/SST.log	
 
+# transfer_executable = TRUE
+should_transfer_files = YES
+# transfer_input_files = data/
 
 # Remove for any jobs that exceed run times of 2 hours
 periodic_remove = (JobStatus == 2) && (time() - EnteneredCurrentStatus) > (2 * 3600)
@@ -45,12 +48,6 @@ periodic_remove = (JobStatus == 2) && (time() - EnteneredCurrentStatus) > (2 * 3
 on_exit_remove = (ExitBySignal == False) && (ExitCode == 0)
 max_retries = 3
 requirements = Machine =!= LastRemoteHost
-
-# transfer_executable = TRUE
-should_transfer_files = YES
-# transfer_input_files = data/
-
-max_retries = 3
 
 # request_cpus = 2
 # request_memory = 8192MB
