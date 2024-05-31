@@ -44,7 +44,7 @@ should_transfer_files = YES
 # transfer_input_files = data/
 
 # Remove for any jobs that exceed run times of 2 hours
-periodic_remove = (JobStatus == 2) && (time() - EnteneredCurrentStatus) > (2 * 3600)
+periodic_remove = (JobStatus == 2) && (time() - EnteredCurrentStatus) > (2 * 3600)
 
 # set up retries
 on_exit_remove = (ExitBySignal == False) && (ExitCode == 0)
