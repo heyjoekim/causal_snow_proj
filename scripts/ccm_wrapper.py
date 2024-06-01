@@ -40,7 +40,7 @@ def runCCM(clim, i, j, tau):
             lons.append(lon)
             lats.append(lat)
             ecos.append(eco)
-            rhos.append(np.round(rho,3))
+            rhos.append(np.nan)
         else:
             # save variable names
             var1 = df.columns[0]    # usually swe
