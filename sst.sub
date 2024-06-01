@@ -41,18 +41,19 @@ log         = /home/hkim139/causal_snow_proj/cluster_log/$(FNAME).$INT(i).$INT(j
 
 
 # Remove for any jobs that exceed run times of 2 hours
-periodic_remove = (JobStatus == 2) && (time() - EnteredCurrentStatus) > (2 * 3600)
+periodic_hold = (JobStatus == 2) && (time() - EnteredCurrentStatus) > (2 * 3600)
+periodic_hold_reason = "Job ran for more than two hours"
+periodic_hold_subcode = 42
+periodic_release = (HoldReasonSubCode == 42)
 
 # set up retries
 on_exit_remove = (ExitBySignal == False) && (ExitCode == 0)
-max_retries = 3
+max_retries = 5
 requirements = Machine =!= LastRemoteHost
 
 # transfer_executable = TRUE
 should_transfer_files = YES
 # transfer_input_files = data/
-
-max_retries = 3
 
 # request_cpus = 2
 # request_memory = 8192MB

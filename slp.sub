@@ -27,7 +27,7 @@ j   = (($(Process) /  $(MAX_TAU)) % $(MAX_J))
 tau = ( $(Process) %  $(MAX_TAU))
 
 # Information that HTCondor actually needs to send to nodes
-executable = /home/hkim139/causal_snow_proj/run_sst.sh 
+executable  = /home/hkim139/causal_snow_proj/run_sst.sh 
 arguments   = "$(FNAME) $INT(i) $INT(j) $INT(tau)"
 error       = /home/hkim139/causal_snow_proj/cluster_err/$(FNAME).$INT(i).$INT(j).$INT(tau).err
 output      = /home/hkim139/causal_snow_proj/cluster_out/$(FNAME).$INT(i).$INT(j).$INT(tau).out
@@ -44,12 +44,15 @@ should_transfer_files = YES
 # transfer_input_files = data/
 
 # Remove for any jobs that exceed run times of 2 hours
-periodic_remove = (JobStatus == 2) && (time() - EnteredCurrentStatus) > (2 * 3600)
+periodic_hold = (JobStatus == 2) && (time() - EnteredCurrentStatus) > (2 * 3600)
+periodic_hold_reason = "Job ran for more than two hours"
+periodic_hold_subcode = 42
+periodic_release = (HoldReasonSubCode == 42)
 
 # set up retries
 on_exit_remove = (ExitBySignal == False) && (ExitCode == 0)
-max_retries = 3
-requirements = Machine =!= LastRemoteHost
+max_retries    = 5
+requirements   = Machine =!= LastRemoteHost
 
 # request_cpus = 2
 # request_memory = 8192MB
