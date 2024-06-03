@@ -22,12 +22,24 @@ def read_ccm_outputs(clim, t):
         df = pd.concat([df, temp_df], ignore_index=True)
     
     # convert to xarray
-    df_multind = df.set_index(['eco_region', 'lon', 'lat'])
+    df_multind = df.set_index(['eco_region', 'lat', 'lon'])
     ccm_array = df_multind.to_xarray()
     return(ccm_array)
 
 
 def save_ccm(ccm_array, vars, path='./data/processed/'):
     fname_str = 'ccm_{}_tau_{}.nc'.format(vars[0], vars[1])
+    ccm_array['lat'].attrs = {
+            'standard_name':'latitude',
+            'long_name':'Latitude',
+            'units':'degrees_north',
+            'axis':'Y'
+            }
+    ccm_array['lon'].attrs = {
+            'standard_name':'longitude',
+            'long_name':'Longitude',
+            'units':'degrees_east',
+            'axis':'X'
+            }
     ccm_array.to_netcdf(path+fname_str)
     return()
