@@ -19,7 +19,10 @@ def runCCM(clim, i, j, tau):
     lons = []
     lats = []
     ecos = []
+    embedDims = []
     rhos = []
+    slopes = []
+    rho_rs = []
     
     for f in swe_files:
 
@@ -40,7 +43,10 @@ def runCCM(clim, i, j, tau):
             lons.append(lon)
             lats.append(lat)
             ecos.append(eco)
+            embedDims.append(np.nan)
             rhos.append(np.nan)
+            slopes.append(np.nan)
+            rho_rs.append(np.nan)
         else:
             # save variable names
             var1 = df.columns[0]    # usually swe
@@ -53,7 +59,7 @@ def runCCM(clim, i, j, tau):
             # convert time to ISO-8601 as required by pyEDM
             df['time'] = df['time'].map(lambda x: x.isoformat())
 
-            # find embedd dimensions
+            # find embeded dimensions
             d1 = EmbedDimension(
                     dataFrame=df,
                     lib=[1, 100],
@@ -62,16 +68,16 @@ def runCCM(clim, i, j, tau):
                     target=var2,
                     showPlot=False)
 
-            d2 = EmbedDimension(
-                    dataFrame=df,
-                    lib=[1, 100],
-                    pred=[201, df_len],
-                    columns=var1,
-                    target=var1,
-                    showPlot=False)
+            #d2 = EmbedDimension(
+            #        dataFrame=df,
+            #        lib=[1, 100],
+            #        pred=[201, df_len],
+            #        columns=var1,
+            #        target=var1,
+            #        showPlot=False)
 
             ed1 = d1[d1['rho'] == d1['rho'].max()]['E'].iloc[0]
-            ed2 = d2[d2['rho'] == d2['rho'].max()]['E'].iloc[0]
+           #  ed2 = d2[d2['rho'] == d2['rho'].max()]['E'].iloc[0]
             
             # Max libSize must be less than N - (E+1)
             maxN = df_len - (ed1 + 1)
@@ -81,28 +87,39 @@ def runCCM(clim, i, j, tau):
             CCMresult = CCM(
                     dataFrame = df,
                     E=int(ed1),
+                    seed=30,
                     tau=-tau,
                     columns=var2,
                     target=var1,
-                    libSizes=[15, maxN-1, 25],
+                    libSizes=[15, maxN-1, 8],
                     sample=100,
                     showPlot=False)
 
             # if var is anchovy::sst, reads as sst influences anchovy
             # get SST/SLP influence SWE
             rho = CCMresult['{}:{}'.format(var1, var2)].iloc[-1]
+            # get SWE influence on SST/SLP
+            rho_r = CCMresult['{}:{}'.format(var2, var1)].iloc[-1]
+            # calculate the slope to check for convergence
+            slope = (CCMresult['{}:{}'.format(var1, var2)].iloc[-1] - CCMresult['{}:{}'.format(var1, var2)].iloc[-20])/(20)
 
 
             lons.append(lon)
             lats.append(lat)
             ecos.append(eco)
+            embedDims.append(ed1)
             rhos.append(np.round(rho,3))
+            slopes.append(np.round(slope,3))
+            rho_rs.append(np.round(rho_r,3))
     
     # save results
     results = pd.DataFrame({'eco_region': ecos,
                             'lon': lons,
                             'lat': lats,
-                            'rho': rhos})
+                            'embed dims': embedDims,
+                            'rho': rhos,
+                            'slope (last 20)': slopes,
+                            'rho reverse': rho_rs})
 
     # We'll need to change this in the future after we figure out the directory
     # structure.
