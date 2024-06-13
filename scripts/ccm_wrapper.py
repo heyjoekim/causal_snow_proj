@@ -48,7 +48,6 @@ def runCCM(clim, i, j, tau):
             df = df.dropna()
             df = df.reset_index()
 
-
             df_len = len(df)
 
             # convert time to ISO-8601 as required by pyEDM
@@ -71,9 +70,9 @@ def runCCM(clim, i, j, tau):
                     target=var1,
                     showPlot=False)
 
-            ed1 = d1[d1['rho'] == d1['rho'].max()]['E'].item()
-            ed2 = d2[d2['rho'] == d2['rho'].max()]['E'].item()
-
+            ed1 = d1[d1['rho'] == d1['rho'].max()]['E'].iloc[0]
+            ed2 = d2[d2['rho'] == d2['rho'].max()]['E'].iloc[0]
+            
             # Max libSize must be less than N - (E+1)
             maxN = df_len - (ed1 + 1)
         
