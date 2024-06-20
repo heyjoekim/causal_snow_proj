@@ -102,7 +102,7 @@ def runCCM(clim, i, j, tau):
     results = pd.DataFrame({'eco_region': eco,
                             'lon': lon,
                             'lat': lat,
-                            'embed dims': int(ed1),
+                            'embed dims': ed1,
                             'rho': np.round(rho,3),
                             'slope (last 20)': np.round(slope,3),
                             'rho reverse': np.round(rho_r,3)}, index=[0])

@@ -107,7 +107,7 @@ def runCCM(clim, i, j, tau):
             lons.append(lon)
             lats.append(lat)
             ecos.append(eco)
-            embedDims.append(ed1)
+            embedDims.append(int(ed1))
             rhos.append(np.round(rho,3))
             slopes.append(np.round(slope,3))
             rho_rs.append(np.round(rho_r,3))
