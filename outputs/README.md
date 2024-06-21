@@ -1,9 +1,12 @@
 Results:
 
-- results: results for SST and SLP with other variables includes mainly
+- results.zip: results for SST and SLP with other variables includes variables in results.zip but also includes:
     - E
-    - rho
     - Slope
-    - rho_reverse
-- first_results.zip
-- wus_results.zip
+    - rho_reverseu
+- first_results.zip: first results. Only had some data. Results now uses a seed of 30 for reproduceability.
+    - eco-region
+    - lat
+    - lon 
+    - rho (CCM results)
+- wus_results.zip: Files with CCM results but for the entire western US snow station data
