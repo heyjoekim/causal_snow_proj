@@ -167,5 +167,7 @@ cython_debug/
 # Ignoring singularity/apptainer containers
 *.sif
 
+.DS_Store
+
 # ignore output files
 outputs/
