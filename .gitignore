@@ -173,5 +173,9 @@ cython_debug/
 *.svg
 *.png
 
+# ignore AGU stuff
+AGU_plots.ipynb
+agu_data/
+
 # ignore output files
 outputs/
