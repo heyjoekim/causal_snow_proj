@@ -170,8 +170,8 @@ cython_debug/
 .DS_Store
 
 # ignore some picture files
-.svg
-.png
+*.svg
+*.png
 
 # ignore output files
 outputs/
