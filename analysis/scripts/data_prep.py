@@ -1,8 +1,10 @@
-import io, requests
+import os, io, requests
 import xarray as xr
 import pandas as pd
 import cdsapi
 
+
+current_dir = os.getcwd()
 # READ AND WRITE ENSO DATA
 # This just reads the data from an url
 # Sea Surface Temperature (SST) data from http://www.cpc.ncep.noaa.gov/data/indices/
@@ -67,11 +69,11 @@ request = {
     "area": [60, 120, -20, 280]
 }
 
+print("WRITING TO analysis/data/ERA/")
+os.chdir('../data/ERA/')
 target = 'ERA5_mslp_pacific.nc'
 client = cdsapi.Client()
-client.retrieve(dataset, request, target)   # .download()
-
-
-print("WRITING TO analysis/data/ERA/")
-#nino34.to_netcdf('../data/enso/nino34.nc')
+client.retrieve(dataset, request, target)
 print("FINISHED ERA")
+
+os.chdir(current_dir)
