@@ -13,7 +13,8 @@ FOR SST:
 - Total Runs: 41\*51\*3 = 6273 
 
 
-SLP runs were initially conducted and not shown.
+SLP runs were initially conducted and the code has been made available. However,
+we did not use this analysis in our manuscript and focused on the SST analysis.
 
 This repository is attempting to follow the guidelines for GRRIEn repository and code.
 See following paper for more details!
