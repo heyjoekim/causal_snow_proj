@@ -182,6 +182,7 @@ agu_data/
 analysis/data/ERA/*.nc
 analysis/data/snotel/*.nc
 analysis/data/SLP_anoms.nc
+analysis/data/corr/*
 
 # ignore output files
 outputs/
