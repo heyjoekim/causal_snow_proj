@@ -27,7 +27,7 @@ def read_ccm_outputs(clim, t):
     return(ccm_array)
 
 
-def save_ccm(ccm_array, vars, path='./data/processed/'):
+def save_ccm(ccm_array, vars, path='./analysis/data/processed/'):
     fname_str = 'ccm_{}_tau_{}.nc'.format(vars[0], vars[1])
     ccm_array['lat'].attrs = {
             'standard_name':'latitude',
