@@ -181,6 +181,7 @@ agu_data/
 # ignore potentially large NC files
 analysis/data/ERA/*.nc
 analysis/data/snotel/*.nc
+analysis/data/SLP_anoms.nc
 
 # ignore output files
 outputs/
