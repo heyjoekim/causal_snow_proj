@@ -17,6 +17,10 @@
     - Processed CCM Files from `causal_snow_proj/compile_ccm_results.ipynb`
 - `snow_by_eco`
     - SWE anomalies by ecoregion
+- `snotel`
+    - Western US station data
+    - Files were too big to add to repo
+    - This can be downloaded: [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4546865.svg)](https://doi.org/10.5281/zenodo.4546865)
 - `SST_anoms.nc`
 - `SWE_anoms.nc`
 
