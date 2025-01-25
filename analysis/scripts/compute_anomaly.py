@@ -2,6 +2,7 @@ import xarray as xr
 import pandas as pd
 import geopandas as gpd
 import cartopy.crs as ccrs
+import numpy as np
 
 # common variables
 time_slice = slice('1963-10-01', '2019-09-01')
