@@ -1,6 +1,6 @@
 # Directory featuring data in this analysis:
 
--`ERA`
+- `ERA`
 - `NA_CEC_Eco_Level3`
 - `PDO`
 - `corr`
