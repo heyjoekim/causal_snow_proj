@@ -13,9 +13,9 @@ FOR SST:
 Total Runs: 41\*51\*3 = 6273 
 
 
-SLP runs were conducted and not shown
+SLP runs were initially conducted and not shown.
 
-FOR SLP:
-- lat: 33
-- lon: 41
-Total Runs: 33\*41\*3 = 4059
+This repository is attempting to follow the guidelines for GRRIEn repository and code.
+See following paper for more details!
+
+Carter, E., Hultquist, C., & Wen, T. (2023). GRRIEn Analysis: A Data Science Cheat Sheet for Earth Scientists Learning from Global Earth Observations. Artificial Intelligence for the Earth Systems, 2(2), 220065. https://doi-org.libezproxy2.syr.edu/10.1175/AIES-D-22-0065.1
