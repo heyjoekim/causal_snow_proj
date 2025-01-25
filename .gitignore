@@ -176,6 +176,7 @@ cython_debug/
 # ignore AGU stuff
 AGU_plots.ipynb
 agu_data/
+*.ipynb
 
 # ignore potentially large NC files
 analysis/data/ERA/*.nc
