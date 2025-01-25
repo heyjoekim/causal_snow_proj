@@ -10,7 +10,7 @@ Tau: 3 [1, 3, 6]
 FOR SST:
 - lat: 41
 - lon: 51
-Total Runs: 41\*51\*3 = 6273 
+- Total Runs: 41\*51\*3 = 6273 
 
 
 SLP runs were initially conducted and not shown.
