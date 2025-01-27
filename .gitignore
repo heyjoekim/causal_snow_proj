@@ -184,5 +184,9 @@ analysis/data/snotel/*.nc
 analysis/data/SLP_anoms.nc
 analysis/data/corr/*
 
+
+# ignore figure files
+analysis/figs/*
+
 # ignore output files
 outputs/

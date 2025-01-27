@@ -34,3 +34,6 @@ ecos_not_in = ['Middle Rockies',
                'Arizona/New Mexico Mountains',
                'Northern Basin and Range']
 
+# include dirs to write figures
+pub_dir_main = './figs/main/'
+pub_dir_supp = './figs/supp/'
