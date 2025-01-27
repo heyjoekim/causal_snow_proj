@@ -1,3 +1,4 @@
+# Ecoregions used in originial analysis
 eco_regions = ['Middle Rockies',
                'Klamath Mountains',
                'Sierra Nevada',
@@ -14,7 +15,13 @@ eco_regions = ['Middle Rockies',
                'Arizona/New Mexico Mountains',
                'Northern Basin and Range']
 
+# MAIN PNW Ecoregion used in analysis
+coast_ecos = ['North Cascades',
+              'Cascades',
+              'Eastern Cascades Slopes and Foothills',
+              'Columbia Mountains/Northern Rockies']
 
+# Other ecoregions from eco_regions not used in analysis
 ecos_not_in = ['Middle Rockies',
                'Klamath Mountains',
                'Sierra Nevada',
@@ -27,7 +34,3 @@ ecos_not_in = ['Middle Rockies',
                'Arizona/New Mexico Mountains',
                'Northern Basin and Range']
 
-coast_ecos = ['North Cascades',
-              'Cascades',
-              'Eastern Cascades Slopes and Foothills',
-              'Columbia Mountains/Northern Rockies']
