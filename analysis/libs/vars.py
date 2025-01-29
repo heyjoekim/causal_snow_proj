@@ -1,3 +1,5 @@
+import numpy as np
+
 # Ecoregions used in originial analysis
 eco_regions = ['Middle Rockies',
                'Klamath Mountains',
@@ -37,3 +39,7 @@ ecos_not_in = ['Middle Rockies',
 # include dirs to write figures
 pub_dir_main = './figs/main/'
 pub_dir_supp = './figs/supp/'
+
+def mean_abs_error(xx, yy):
+    mae = np.mean(np.abs(yy-xx))
+    return(mae)
