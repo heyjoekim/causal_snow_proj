@@ -166,6 +166,7 @@ cython_debug/
 
 # Ignoring singularity/apptainer containers
 *.sif
+slp.sub
 
 .DS_Store
 

@@ -2,36 +2,17 @@
 # HTCondor Submit Description File.
 # Author: David Fastovich, dfastovi@syr.edu
 # Date: 5/9/2024
-# Modified by: Haejo Kim, hkim139@syr.edu
+# Modified By: Haejo Kim, hkim139@syr.edu
 # Date, last modified: 5/30/2024
 # Source: https://research.iac.es/sieinvens/siepedia/pmwiki.php?n=HOWTOs.CondorSubmitFile
 #########################################################################################
 
-# File name
-FNAME = SLP
-
-# nlon 
-MAX_I = 41
-
-# nlat
-MAX_J = 33
-
-# ntau
-MAX_TAU = 3
-
-# Simulating a three level loop
-N = $(MAX_I) * $(MAX_J) * $(MAX_TAU)
-
-i   = ( $(Process) / ($(MAX_TAU)  * $(MAX_J)))
-j   = (($(Process) /  $(MAX_TAU)) % $(MAX_J))
-tau = ( $(Process) %  $(MAX_TAU))
-
 # Information that HTCondor actually needs to send to nodes
 executable  = /home/hkim139/causal_snow_proj/run_sst.sh 
-arguments   = "$(FNAME) $INT(i) $INT(j) $INT(tau)"
-error       = /home/hkim139/causal_snow_proj/cluster_err/$(FNAME).$INT(i).$INT(j).$INT(tau).err
-output      = /home/hkim139/causal_snow_proj/cluster_out/$(FNAME).$INT(i).$INT(j).$INT(tau).out
-log         = /home/hkim139/causal_snow_proj/cluster_log/$(FNAME).$INT(i).$INT(j).$INT(tau).log	
+arguments   = "$(args)"
+error       = /home/hkim139/causal_snow_proj/cluster_err/$(ClusterId).$(ProcId).err
+output      = /home/hkim139/causal_snow_proj/cluster_out/$(ClusterId).$(ProcId).out
+log         = /home/hkim139/causal_snow_proj/cluster_log/$(ClusterId).log	
 
 # TEST CASE OF IT WORKING FOR 1 NODE
 # arguments   = "SST 0 0 1"
@@ -39,24 +20,25 @@ log         = /home/hkim139/causal_snow_proj/cluster_log/$(FNAME).$INT(i).$INT(j
 # output      = /home/hkim139/causal_snow_proj/cluster_out/SST.out
 # log         = /home/hkim139/causal_snow_proj/cluster_log/SST.log	
 
-# transfer_executable = TRUE
-should_transfer_files = YES
-# transfer_input_files = data/
 
-# Remove for any jobs that exceed run times of 2 hours
-periodic_hold = (JobStatus == 2) && (time() - EnteredCurrentStatus) > (2 * 3600)
-periodic_hold_reason = "Job ran for more than two hours"
+# Remove for any jobs that exceed run times of 5 hours
+periodic_hold = (JobStatus == 2) && (time() - EnteredCurrentStatus) > (5 * 3600)
+periodic_hold_reason = "Job ran for more than five hours"
 periodic_hold_subcode = 42
 periodic_release = (HoldReasonSubCode == 42)
 
 # set up retries
 on_exit_remove = (ExitBySignal == False) && (ExitCode == 0)
-max_retries    = 5
-requirements   = Machine =!= LastRemoteHost
+max_retries = 5
+requirements = Machine =!= LastRemoteHost
+
+# transfer_executable = TRUE
+should_transfer_files = YES
+# transfer_input_files = data/
 
 # request_cpus = 2
 # request_memory = 8192MB
 # request_disk = 4096MB
 
-queue $(N)
+queue args from arguments.txt
 # queue 1
