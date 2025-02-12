@@ -14,13 +14,6 @@ error       = /home/hkim139/causal_snow_proj/cluster_err/$(ClusterId).$(ProcId).
 output      = /home/hkim139/causal_snow_proj/cluster_out/$(ClusterId).$(ProcId).out
 log         = /home/hkim139/causal_snow_proj/cluster_log/$(ClusterId).log	
 
-# TEST CASE OF IT WORKING FOR 1 NODE
-# arguments   = "SST 0 0 1"
-# error       = /home/hkim139/causal_snow_proj/cluster_err/SST.err
-# output      = /home/hkim139/causal_snow_proj/cluster_out/SST.out
-# log         = /home/hkim139/causal_snow_proj/cluster_log/SST.log	
-
-
 # Remove for any jobs that exceed run times of 5 hours
 periodic_hold = (JobStatus == 2) && (time() - EnteredCurrentStatus) > (5 * 3600)
 periodic_hold_reason = "Job ran for more than five hours"
