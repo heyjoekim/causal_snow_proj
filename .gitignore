@@ -184,7 +184,7 @@ analysis/data/ERA/*.nc
 analysis/data/snotel/*.nc
 analysis/data/SLP_anoms.nc
 analysis/data/corr/*
-
+analysis/scripts/*.csv
 
 # ignore figure files
 analysis/figs/*
