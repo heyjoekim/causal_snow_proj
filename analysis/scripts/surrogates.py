@@ -46,6 +46,7 @@ if __name__ == "__main__":
     ecos = []
     lags = []
     skills = []
+    nums = []
 
     for idx, eco in zip([-1, 5, 8, 10], ['Cascades', 'Eastern Cascades Slopes and Foothills', 'North Cascades', 'Columbia Mountains/Northern Rockies']):
         df = CCMsetup(idx, nino34)
@@ -58,7 +59,7 @@ if __name__ == "__main__":
         surrogates = SurrogateData(df, column='ANOM', method='seasonal', numSurrogates=s)
         surrogates['swe'] = df['swe_level2']
 
-        ccm_surr = pd.DataFrame()
+        #ccm_surr = pd.DataFrame()
         for l in [-1, -3, -6]:
             for i in range(s):
                 test = CCM(dataFrame=surrogates,
@@ -69,15 +70,18 @@ if __name__ == "__main__":
                            columns='swe',
                            libSizes=[15,maxN-1,8],
                            sample=100)
-                ccm_surr = pd.concat([ccm_surr, test], axis=1)
+                #ccm_surr = pd.concat([ccm_surr, test], axis=1)
 
-            surr_skill = ccm_surr[['swe:ANOM_{}'.format(i+1) for i in range(s)]].mean(axis=1)
-            ecos.append(eco)
-            lags.append(np.abs(l))
-            skills.append(surr_skill.iloc[-1])
+                surr_skill = test['swe:ANOM_{}'.format(i+1)]
+                nums.append(i)
+                ecos.append(eco)
+                lags.append(np.abs(l))
+                skills.append(np.round(surr_skill.iloc[-1],3))
+                print('Finished: {}, {}, {}'.format(eco, l, i))
     
     nino_surr_vals = pd.DataFrame({
         'ecoregion':ecos,
+        'n':nums,
         'lags': lags,
         'skill': skills
         })

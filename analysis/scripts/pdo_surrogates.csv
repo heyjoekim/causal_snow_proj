@@ -1,0 +1,601 @@
+ecoregion,n,lags,skill
+Cascades,0,1,0.083
+Cascades,1,1,0.005
+Cascades,2,1,0.031
+Cascades,3,1,0.035
+Cascades,4,1,0.081
+Cascades,5,1,0.09
+Cascades,6,1,0.099
+Cascades,7,1,0.095
+Cascades,8,1,-0.005
+Cascades,9,1,0.037
+Cascades,10,1,-0.006
+Cascades,11,1,0.073
+Cascades,12,1,0.033
+Cascades,13,1,-0.031
+Cascades,14,1,0.062
+Cascades,15,1,0.126
+Cascades,16,1,0.078
+Cascades,17,1,0.108
+Cascades,18,1,0.074
+Cascades,19,1,-0.063
+Cascades,20,1,0.125
+Cascades,21,1,0.083
+Cascades,22,1,0.134
+Cascades,23,1,0.049
+Cascades,24,1,0.039
+Cascades,25,1,0.123
+Cascades,26,1,0.14
+Cascades,27,1,-0.024
+Cascades,28,1,-0.011
+Cascades,29,1,0.045
+Cascades,30,1,0.025
+Cascades,31,1,-0.007
+Cascades,32,1,0.057
+Cascades,33,1,0.055
+Cascades,34,1,0.085
+Cascades,35,1,0.043
+Cascades,36,1,0.012
+Cascades,37,1,0.048
+Cascades,38,1,0.027
+Cascades,39,1,0.099
+Cascades,40,1,0.049
+Cascades,41,1,-0.005
+Cascades,42,1,0.029
+Cascades,43,1,0.028
+Cascades,44,1,0.042
+Cascades,45,1,0.053
+Cascades,46,1,0.077
+Cascades,47,1,-0.032
+Cascades,48,1,-0.033
+Cascades,49,1,-0.036
+Cascades,0,3,0.083
+Cascades,1,3,0.005
+Cascades,2,3,0.031
+Cascades,3,3,0.035
+Cascades,4,3,0.081
+Cascades,5,3,0.09
+Cascades,6,3,0.099
+Cascades,7,3,0.095
+Cascades,8,3,-0.005
+Cascades,9,3,0.037
+Cascades,10,3,-0.006
+Cascades,11,3,0.073
+Cascades,12,3,0.033
+Cascades,13,3,-0.031
+Cascades,14,3,0.062
+Cascades,15,3,0.126
+Cascades,16,3,0.078
+Cascades,17,3,0.108
+Cascades,18,3,0.074
+Cascades,19,3,-0.063
+Cascades,20,3,0.125
+Cascades,21,3,0.083
+Cascades,22,3,0.134
+Cascades,23,3,0.049
+Cascades,24,3,0.039
+Cascades,25,3,0.123
+Cascades,26,3,0.14
+Cascades,27,3,-0.024
+Cascades,28,3,-0.011
+Cascades,29,3,0.045
+Cascades,30,3,0.025
+Cascades,31,3,-0.007
+Cascades,32,3,0.057
+Cascades,33,3,0.055
+Cascades,34,3,0.085
+Cascades,35,3,0.043
+Cascades,36,3,0.012
+Cascades,37,3,0.048
+Cascades,38,3,0.027
+Cascades,39,3,0.099
+Cascades,40,3,0.049
+Cascades,41,3,-0.005
+Cascades,42,3,0.029
+Cascades,43,3,0.028
+Cascades,44,3,0.042
+Cascades,45,3,0.053
+Cascades,46,3,0.077
+Cascades,47,3,-0.032
+Cascades,48,3,-0.033
+Cascades,49,3,-0.036
+Cascades,0,6,0.083
+Cascades,1,6,0.005
+Cascades,2,6,0.031
+Cascades,3,6,0.035
+Cascades,4,6,0.081
+Cascades,5,6,0.09
+Cascades,6,6,0.099
+Cascades,7,6,0.095
+Cascades,8,6,-0.005
+Cascades,9,6,0.037
+Cascades,10,6,-0.006
+Cascades,11,6,0.073
+Cascades,12,6,0.033
+Cascades,13,6,-0.031
+Cascades,14,6,0.062
+Cascades,15,6,0.126
+Cascades,16,6,0.078
+Cascades,17,6,0.108
+Cascades,18,6,0.074
+Cascades,19,6,-0.063
+Cascades,20,6,0.125
+Cascades,21,6,0.083
+Cascades,22,6,0.134
+Cascades,23,6,0.049
+Cascades,24,6,0.039
+Cascades,25,6,0.123
+Cascades,26,6,0.14
+Cascades,27,6,-0.024
+Cascades,28,6,-0.011
+Cascades,29,6,0.045
+Cascades,30,6,0.025
+Cascades,31,6,-0.007
+Cascades,32,6,0.057
+Cascades,33,6,0.055
+Cascades,34,6,0.085
+Cascades,35,6,0.043
+Cascades,36,6,0.012
+Cascades,37,6,0.048
+Cascades,38,6,0.027
+Cascades,39,6,0.099
+Cascades,40,6,0.049
+Cascades,41,6,-0.005
+Cascades,42,6,0.029
+Cascades,43,6,0.028
+Cascades,44,6,0.042
+Cascades,45,6,0.053
+Cascades,46,6,0.077
+Cascades,47,6,-0.032
+Cascades,48,6,-0.033
+Cascades,49,6,-0.036
+Eastern Cascades Slopes and Foothills,0,1,-0.005
+Eastern Cascades Slopes and Foothills,1,1,0.109
+Eastern Cascades Slopes and Foothills,2,1,0.094
+Eastern Cascades Slopes and Foothills,3,1,0.145
+Eastern Cascades Slopes and Foothills,4,1,0.109
+Eastern Cascades Slopes and Foothills,5,1,0.116
+Eastern Cascades Slopes and Foothills,6,1,0.087
+Eastern Cascades Slopes and Foothills,7,1,-0.059
+Eastern Cascades Slopes and Foothills,8,1,0.05
+Eastern Cascades Slopes and Foothills,9,1,0.11
+Eastern Cascades Slopes and Foothills,10,1,0.148
+Eastern Cascades Slopes and Foothills,11,1,-0.001
+Eastern Cascades Slopes and Foothills,12,1,0.027
+Eastern Cascades Slopes and Foothills,13,1,0.021
+Eastern Cascades Slopes and Foothills,14,1,0.084
+Eastern Cascades Slopes and Foothills,15,1,0.124
+Eastern Cascades Slopes and Foothills,16,1,0.07
+Eastern Cascades Slopes and Foothills,17,1,0.076
+Eastern Cascades Slopes and Foothills,18,1,-0.011
+Eastern Cascades Slopes and Foothills,19,1,0.106
+Eastern Cascades Slopes and Foothills,20,1,0.027
+Eastern Cascades Slopes and Foothills,21,1,0.071
+Eastern Cascades Slopes and Foothills,22,1,0.163
+Eastern Cascades Slopes and Foothills,23,1,0.107
+Eastern Cascades Slopes and Foothills,24,1,0.047
+Eastern Cascades Slopes and Foothills,25,1,0.076
+Eastern Cascades Slopes and Foothills,26,1,0.114
+Eastern Cascades Slopes and Foothills,27,1,-0.008
+Eastern Cascades Slopes and Foothills,28,1,0.022
+Eastern Cascades Slopes and Foothills,29,1,0.085
+Eastern Cascades Slopes and Foothills,30,1,0.036
+Eastern Cascades Slopes and Foothills,31,1,0.055
+Eastern Cascades Slopes and Foothills,32,1,0.145
+Eastern Cascades Slopes and Foothills,33,1,0.07
+Eastern Cascades Slopes and Foothills,34,1,0.081
+Eastern Cascades Slopes and Foothills,35,1,0.129
+Eastern Cascades Slopes and Foothills,36,1,0.065
+Eastern Cascades Slopes and Foothills,37,1,0.068
+Eastern Cascades Slopes and Foothills,38,1,0.108
+Eastern Cascades Slopes and Foothills,39,1,0.143
+Eastern Cascades Slopes and Foothills,40,1,-0.076
+Eastern Cascades Slopes and Foothills,41,1,0.054
+Eastern Cascades Slopes and Foothills,42,1,0.043
+Eastern Cascades Slopes and Foothills,43,1,0.136
+Eastern Cascades Slopes and Foothills,44,1,0.097
+Eastern Cascades Slopes and Foothills,45,1,0.087
+Eastern Cascades Slopes and Foothills,46,1,0.064
+Eastern Cascades Slopes and Foothills,47,1,0.12
+Eastern Cascades Slopes and Foothills,48,1,0.057
+Eastern Cascades Slopes and Foothills,49,1,0.117
+Eastern Cascades Slopes and Foothills,0,3,-0.005
+Eastern Cascades Slopes and Foothills,1,3,0.109
+Eastern Cascades Slopes and Foothills,2,3,0.094
+Eastern Cascades Slopes and Foothills,3,3,0.145
+Eastern Cascades Slopes and Foothills,4,3,0.109
+Eastern Cascades Slopes and Foothills,5,3,0.116
+Eastern Cascades Slopes and Foothills,6,3,0.087
+Eastern Cascades Slopes and Foothills,7,3,-0.059
+Eastern Cascades Slopes and Foothills,8,3,0.05
+Eastern Cascades Slopes and Foothills,9,3,0.11
+Eastern Cascades Slopes and Foothills,10,3,0.148
+Eastern Cascades Slopes and Foothills,11,3,-0.001
+Eastern Cascades Slopes and Foothills,12,3,0.027
+Eastern Cascades Slopes and Foothills,13,3,0.021
+Eastern Cascades Slopes and Foothills,14,3,0.084
+Eastern Cascades Slopes and Foothills,15,3,0.124
+Eastern Cascades Slopes and Foothills,16,3,0.07
+Eastern Cascades Slopes and Foothills,17,3,0.076
+Eastern Cascades Slopes and Foothills,18,3,-0.011
+Eastern Cascades Slopes and Foothills,19,3,0.106
+Eastern Cascades Slopes and Foothills,20,3,0.027
+Eastern Cascades Slopes and Foothills,21,3,0.071
+Eastern Cascades Slopes and Foothills,22,3,0.163
+Eastern Cascades Slopes and Foothills,23,3,0.107
+Eastern Cascades Slopes and Foothills,24,3,0.047
+Eastern Cascades Slopes and Foothills,25,3,0.076
+Eastern Cascades Slopes and Foothills,26,3,0.114
+Eastern Cascades Slopes and Foothills,27,3,-0.008
+Eastern Cascades Slopes and Foothills,28,3,0.022
+Eastern Cascades Slopes and Foothills,29,3,0.085
+Eastern Cascades Slopes and Foothills,30,3,0.036
+Eastern Cascades Slopes and Foothills,31,3,0.055
+Eastern Cascades Slopes and Foothills,32,3,0.145
+Eastern Cascades Slopes and Foothills,33,3,0.07
+Eastern Cascades Slopes and Foothills,34,3,0.081
+Eastern Cascades Slopes and Foothills,35,3,0.129
+Eastern Cascades Slopes and Foothills,36,3,0.065
+Eastern Cascades Slopes and Foothills,37,3,0.068
+Eastern Cascades Slopes and Foothills,38,3,0.108
+Eastern Cascades Slopes and Foothills,39,3,0.143
+Eastern Cascades Slopes and Foothills,40,3,-0.076
+Eastern Cascades Slopes and Foothills,41,3,0.054
+Eastern Cascades Slopes and Foothills,42,3,0.043
+Eastern Cascades Slopes and Foothills,43,3,0.136
+Eastern Cascades Slopes and Foothills,44,3,0.097
+Eastern Cascades Slopes and Foothills,45,3,0.087
+Eastern Cascades Slopes and Foothills,46,3,0.064
+Eastern Cascades Slopes and Foothills,47,3,0.12
+Eastern Cascades Slopes and Foothills,48,3,0.057
+Eastern Cascades Slopes and Foothills,49,3,0.117
+Eastern Cascades Slopes and Foothills,0,6,-0.005
+Eastern Cascades Slopes and Foothills,1,6,0.109
+Eastern Cascades Slopes and Foothills,2,6,0.094
+Eastern Cascades Slopes and Foothills,3,6,0.145
+Eastern Cascades Slopes and Foothills,4,6,0.109
+Eastern Cascades Slopes and Foothills,5,6,0.116
+Eastern Cascades Slopes and Foothills,6,6,0.087
+Eastern Cascades Slopes and Foothills,7,6,-0.059
+Eastern Cascades Slopes and Foothills,8,6,0.05
+Eastern Cascades Slopes and Foothills,9,6,0.11
+Eastern Cascades Slopes and Foothills,10,6,0.148
+Eastern Cascades Slopes and Foothills,11,6,-0.001
+Eastern Cascades Slopes and Foothills,12,6,0.027
+Eastern Cascades Slopes and Foothills,13,6,0.021
+Eastern Cascades Slopes and Foothills,14,6,0.084
+Eastern Cascades Slopes and Foothills,15,6,0.124
+Eastern Cascades Slopes and Foothills,16,6,0.07
+Eastern Cascades Slopes and Foothills,17,6,0.076
+Eastern Cascades Slopes and Foothills,18,6,-0.011
+Eastern Cascades Slopes and Foothills,19,6,0.106
+Eastern Cascades Slopes and Foothills,20,6,0.027
+Eastern Cascades Slopes and Foothills,21,6,0.071
+Eastern Cascades Slopes and Foothills,22,6,0.163
+Eastern Cascades Slopes and Foothills,23,6,0.107
+Eastern Cascades Slopes and Foothills,24,6,0.047
+Eastern Cascades Slopes and Foothills,25,6,0.076
+Eastern Cascades Slopes and Foothills,26,6,0.114
+Eastern Cascades Slopes and Foothills,27,6,-0.008
+Eastern Cascades Slopes and Foothills,28,6,0.022
+Eastern Cascades Slopes and Foothills,29,6,0.085
+Eastern Cascades Slopes and Foothills,30,6,0.036
+Eastern Cascades Slopes and Foothills,31,6,0.055
+Eastern Cascades Slopes and Foothills,32,6,0.145
+Eastern Cascades Slopes and Foothills,33,6,0.07
+Eastern Cascades Slopes and Foothills,34,6,0.081
+Eastern Cascades Slopes and Foothills,35,6,0.129
+Eastern Cascades Slopes and Foothills,36,6,0.065
+Eastern Cascades Slopes and Foothills,37,6,0.068
+Eastern Cascades Slopes and Foothills,38,6,0.108
+Eastern Cascades Slopes and Foothills,39,6,0.143
+Eastern Cascades Slopes and Foothills,40,6,-0.076
+Eastern Cascades Slopes and Foothills,41,6,0.054
+Eastern Cascades Slopes and Foothills,42,6,0.043
+Eastern Cascades Slopes and Foothills,43,6,0.136
+Eastern Cascades Slopes and Foothills,44,6,0.097
+Eastern Cascades Slopes and Foothills,45,6,0.087
+Eastern Cascades Slopes and Foothills,46,6,0.064
+Eastern Cascades Slopes and Foothills,47,6,0.12
+Eastern Cascades Slopes and Foothills,48,6,0.057
+Eastern Cascades Slopes and Foothills,49,6,0.117
+North Cascades,0,1,0.007
+North Cascades,1,1,0.15
+North Cascades,2,1,0.03
+North Cascades,3,1,0.121
+North Cascades,4,1,0.137
+North Cascades,5,1,0.038
+North Cascades,6,1,0.115
+North Cascades,7,1,0.12
+North Cascades,8,1,0.142
+North Cascades,9,1,0.143
+North Cascades,10,1,0.092
+North Cascades,11,1,0.04
+North Cascades,12,1,0.194
+North Cascades,13,1,0.119
+North Cascades,14,1,0.119
+North Cascades,15,1,0.072
+North Cascades,16,1,0.008
+North Cascades,17,1,0.058
+North Cascades,18,1,0.074
+North Cascades,19,1,0.12
+North Cascades,20,1,0.117
+North Cascades,21,1,0.101
+North Cascades,22,1,0.127
+North Cascades,23,1,0.218
+North Cascades,24,1,0.074
+North Cascades,25,1,0.132
+North Cascades,26,1,0.172
+North Cascades,27,1,0.028
+North Cascades,28,1,0.053
+North Cascades,29,1,0.189
+North Cascades,30,1,0.036
+North Cascades,31,1,0.162
+North Cascades,32,1,0.117
+North Cascades,33,1,0.122
+North Cascades,34,1,0.08
+North Cascades,35,1,0.177
+North Cascades,36,1,0.114
+North Cascades,37,1,0.171
+North Cascades,38,1,0.11
+North Cascades,39,1,0.152
+North Cascades,40,1,0.077
+North Cascades,41,1,0.035
+North Cascades,42,1,0.11
+North Cascades,43,1,0.032
+North Cascades,44,1,0.204
+North Cascades,45,1,0.094
+North Cascades,46,1,0.071
+North Cascades,47,1,0.086
+North Cascades,48,1,0.07
+North Cascades,49,1,0.186
+North Cascades,0,3,0.113
+North Cascades,1,3,-0.023
+North Cascades,2,3,0.014
+North Cascades,3,3,0.111
+North Cascades,4,3,0.163
+North Cascades,5,3,0.224
+North Cascades,6,3,0.053
+North Cascades,7,3,0.054
+North Cascades,8,3,0.143
+North Cascades,9,3,0.148
+North Cascades,10,3,0.046
+North Cascades,11,3,0.077
+North Cascades,12,3,0.162
+North Cascades,13,3,0.083
+North Cascades,14,3,0.101
+North Cascades,15,3,-0.002
+North Cascades,16,3,0.061
+North Cascades,17,3,0.045
+North Cascades,18,3,0.021
+North Cascades,19,3,0.082
+North Cascades,20,3,0.139
+North Cascades,21,3,0.072
+North Cascades,22,3,0.12
+North Cascades,23,3,0.161
+North Cascades,24,3,0.164
+North Cascades,25,3,0.113
+North Cascades,26,3,0.122
+North Cascades,27,3,0.071
+North Cascades,28,3,0.061
+North Cascades,29,3,0.1
+North Cascades,30,3,0.023
+North Cascades,31,3,0.119
+North Cascades,32,3,0.085
+North Cascades,33,3,-0.02
+North Cascades,34,3,0.059
+North Cascades,35,3,0.079
+North Cascades,36,3,0.187
+North Cascades,37,3,0.054
+North Cascades,38,3,0.05
+North Cascades,39,3,0.057
+North Cascades,40,3,0.166
+North Cascades,41,3,0.099
+North Cascades,42,3,0.08
+North Cascades,43,3,0.083
+North Cascades,44,3,0.17
+North Cascades,45,3,0.121
+North Cascades,46,3,0.112
+North Cascades,47,3,0.015
+North Cascades,48,3,0.114
+North Cascades,49,3,0.026
+North Cascades,0,6,0.088
+North Cascades,1,6,0.023
+North Cascades,2,6,-0.035
+North Cascades,3,6,0.105
+North Cascades,4,6,-0.085
+North Cascades,5,6,0.005
+North Cascades,6,6,0.073
+North Cascades,7,6,-0.018
+North Cascades,8,6,0.079
+North Cascades,9,6,0.047
+North Cascades,10,6,-0.033
+North Cascades,11,6,-0.053
+North Cascades,12,6,0.016
+North Cascades,13,6,0.122
+North Cascades,14,6,0.003
+North Cascades,15,6,-0.035
+North Cascades,16,6,0.025
+North Cascades,17,6,0.065
+North Cascades,18,6,-0.017
+North Cascades,19,6,0.019
+North Cascades,20,6,0.011
+North Cascades,21,6,-0.022
+North Cascades,22,6,0.034
+North Cascades,23,6,0.085
+North Cascades,24,6,0.147
+North Cascades,25,6,0.07
+North Cascades,26,6,0.094
+North Cascades,27,6,0.072
+North Cascades,28,6,-0.01
+North Cascades,29,6,0.031
+North Cascades,30,6,-0.031
+North Cascades,31,6,0.065
+North Cascades,32,6,0.04
+North Cascades,33,6,0.045
+North Cascades,34,6,0.028
+North Cascades,35,6,0.078
+North Cascades,36,6,0.063
+North Cascades,37,6,0.051
+North Cascades,38,6,0.071
+North Cascades,39,6,-0.019
+North Cascades,40,6,0.051
+North Cascades,41,6,-0.001
+North Cascades,42,6,-0.044
+North Cascades,43,6,-0.003
+North Cascades,44,6,0.07
+North Cascades,45,6,-0.012
+North Cascades,46,6,0.077
+North Cascades,47,6,-0.04
+North Cascades,48,6,0.042
+North Cascades,49,6,0.05
+Columbia Mountains/Northern Rockies,0,1,0.055
+Columbia Mountains/Northern Rockies,1,1,0.083
+Columbia Mountains/Northern Rockies,2,1,0.142
+Columbia Mountains/Northern Rockies,3,1,0.109
+Columbia Mountains/Northern Rockies,4,1,0.167
+Columbia Mountains/Northern Rockies,5,1,0.094
+Columbia Mountains/Northern Rockies,6,1,0.044
+Columbia Mountains/Northern Rockies,7,1,0.041
+Columbia Mountains/Northern Rockies,8,1,0.04
+Columbia Mountains/Northern Rockies,9,1,0.058
+Columbia Mountains/Northern Rockies,10,1,0.012
+Columbia Mountains/Northern Rockies,11,1,0.006
+Columbia Mountains/Northern Rockies,12,1,0.113
+Columbia Mountains/Northern Rockies,13,1,0.095
+Columbia Mountains/Northern Rockies,14,1,0.022
+Columbia Mountains/Northern Rockies,15,1,0.058
+Columbia Mountains/Northern Rockies,16,1,0.009
+Columbia Mountains/Northern Rockies,17,1,0.072
+Columbia Mountains/Northern Rockies,18,1,0.114
+Columbia Mountains/Northern Rockies,19,1,-0.006
+Columbia Mountains/Northern Rockies,20,1,0.123
+Columbia Mountains/Northern Rockies,21,1,-0.008
+Columbia Mountains/Northern Rockies,22,1,0.084
+Columbia Mountains/Northern Rockies,23,1,0.092
+Columbia Mountains/Northern Rockies,24,1,0.0
+Columbia Mountains/Northern Rockies,25,1,0.139
+Columbia Mountains/Northern Rockies,26,1,0.073
+Columbia Mountains/Northern Rockies,27,1,0.021
+Columbia Mountains/Northern Rockies,28,1,0.091
+Columbia Mountains/Northern Rockies,29,1,0.065
+Columbia Mountains/Northern Rockies,30,1,0.015
+Columbia Mountains/Northern Rockies,31,1,0.058
+Columbia Mountains/Northern Rockies,32,1,0.031
+Columbia Mountains/Northern Rockies,33,1,0.063
+Columbia Mountains/Northern Rockies,34,1,-0.013
+Columbia Mountains/Northern Rockies,35,1,0.145
+Columbia Mountains/Northern Rockies,36,1,-0.019
+Columbia Mountains/Northern Rockies,37,1,0.152
+Columbia Mountains/Northern Rockies,38,1,0.097
+Columbia Mountains/Northern Rockies,39,1,0.106
+Columbia Mountains/Northern Rockies,40,1,0.088
+Columbia Mountains/Northern Rockies,41,1,0.06
+Columbia Mountains/Northern Rockies,42,1,0.133
+Columbia Mountains/Northern Rockies,43,1,0.11
+Columbia Mountains/Northern Rockies,44,1,0.123
+Columbia Mountains/Northern Rockies,45,1,0.042
+Columbia Mountains/Northern Rockies,46,1,0.064
+Columbia Mountains/Northern Rockies,47,1,0.072
+Columbia Mountains/Northern Rockies,48,1,0.068
+Columbia Mountains/Northern Rockies,49,1,0.01
+Columbia Mountains/Northern Rockies,0,3,0.198
+Columbia Mountains/Northern Rockies,1,3,0.146
+Columbia Mountains/Northern Rockies,2,3,0.112
+Columbia Mountains/Northern Rockies,3,3,0.151
+Columbia Mountains/Northern Rockies,4,3,0.177
+Columbia Mountains/Northern Rockies,5,3,0.077
+Columbia Mountains/Northern Rockies,6,3,0.213
+Columbia Mountains/Northern Rockies,7,3,0.1
+Columbia Mountains/Northern Rockies,8,3,0.184
+Columbia Mountains/Northern Rockies,9,3,0.103
+Columbia Mountains/Northern Rockies,10,3,0.143
+Columbia Mountains/Northern Rockies,11,3,0.131
+Columbia Mountains/Northern Rockies,12,3,0.166
+Columbia Mountains/Northern Rockies,13,3,0.146
+Columbia Mountains/Northern Rockies,14,3,0.178
+Columbia Mountains/Northern Rockies,15,3,0.127
+Columbia Mountains/Northern Rockies,16,3,0.152
+Columbia Mountains/Northern Rockies,17,3,0.139
+Columbia Mountains/Northern Rockies,18,3,0.204
+Columbia Mountains/Northern Rockies,19,3,0.151
+Columbia Mountains/Northern Rockies,20,3,0.178
+Columbia Mountains/Northern Rockies,21,3,0.185
+Columbia Mountains/Northern Rockies,22,3,0.211
+Columbia Mountains/Northern Rockies,23,3,0.16
+Columbia Mountains/Northern Rockies,24,3,0.036
+Columbia Mountains/Northern Rockies,25,3,0.144
+Columbia Mountains/Northern Rockies,26,3,0.19
+Columbia Mountains/Northern Rockies,27,3,0.115
+Columbia Mountains/Northern Rockies,28,3,0.16
+Columbia Mountains/Northern Rockies,29,3,0.143
+Columbia Mountains/Northern Rockies,30,3,0.052
+Columbia Mountains/Northern Rockies,31,3,0.131
+Columbia Mountains/Northern Rockies,32,3,0.038
+Columbia Mountains/Northern Rockies,33,3,0.125
+Columbia Mountains/Northern Rockies,34,3,0.098
+Columbia Mountains/Northern Rockies,35,3,0.084
+Columbia Mountains/Northern Rockies,36,3,0.175
+Columbia Mountains/Northern Rockies,37,3,0.146
+Columbia Mountains/Northern Rockies,38,3,0.19
+Columbia Mountains/Northern Rockies,39,3,0.107
+Columbia Mountains/Northern Rockies,40,3,0.102
+Columbia Mountains/Northern Rockies,41,3,0.189
+Columbia Mountains/Northern Rockies,42,3,0.117
+Columbia Mountains/Northern Rockies,43,3,0.129
+Columbia Mountains/Northern Rockies,44,3,0.221
+Columbia Mountains/Northern Rockies,45,3,0.029
+Columbia Mountains/Northern Rockies,46,3,0.138
+Columbia Mountains/Northern Rockies,47,3,0.05
+Columbia Mountains/Northern Rockies,48,3,0.164
+Columbia Mountains/Northern Rockies,49,3,0.132
+Columbia Mountains/Northern Rockies,0,6,0.149
+Columbia Mountains/Northern Rockies,1,6,0.206
+Columbia Mountains/Northern Rockies,2,6,0.173
+Columbia Mountains/Northern Rockies,3,6,0.163
+Columbia Mountains/Northern Rockies,4,6,0.195
+Columbia Mountains/Northern Rockies,5,6,0.121
+Columbia Mountains/Northern Rockies,6,6,0.148
+Columbia Mountains/Northern Rockies,7,6,0.163
+Columbia Mountains/Northern Rockies,8,6,0.145
+Columbia Mountains/Northern Rockies,9,6,0.181
+Columbia Mountains/Northern Rockies,10,6,0.183
+Columbia Mountains/Northern Rockies,11,6,0.145
+Columbia Mountains/Northern Rockies,12,6,0.196
+Columbia Mountains/Northern Rockies,13,6,0.074
+Columbia Mountains/Northern Rockies,14,6,0.222
+Columbia Mountains/Northern Rockies,15,6,0.125
+Columbia Mountains/Northern Rockies,16,6,0.104
+Columbia Mountains/Northern Rockies,17,6,0.129
+Columbia Mountains/Northern Rockies,18,6,0.174
+Columbia Mountains/Northern Rockies,19,6,0.252
+Columbia Mountains/Northern Rockies,20,6,0.123
+Columbia Mountains/Northern Rockies,21,6,0.21
+Columbia Mountains/Northern Rockies,22,6,0.226
+Columbia Mountains/Northern Rockies,23,6,0.13
+Columbia Mountains/Northern Rockies,24,6,0.182
+Columbia Mountains/Northern Rockies,25,6,0.166
+Columbia Mountains/Northern Rockies,26,6,0.134
+Columbia Mountains/Northern Rockies,27,6,0.052
+Columbia Mountains/Northern Rockies,28,6,0.196
+Columbia Mountains/Northern Rockies,29,6,0.23
+Columbia Mountains/Northern Rockies,30,6,0.132
+Columbia Mountains/Northern Rockies,31,6,0.138
+Columbia Mountains/Northern Rockies,32,6,0.198
+Columbia Mountains/Northern Rockies,33,6,0.133
+Columbia Mountains/Northern Rockies,34,6,0.133
+Columbia Mountains/Northern Rockies,35,6,0.131
+Columbia Mountains/Northern Rockies,36,6,0.172
+Columbia Mountains/Northern Rockies,37,6,0.221
+Columbia Mountains/Northern Rockies,38,6,0.134
+Columbia Mountains/Northern Rockies,39,6,0.126
+Columbia Mountains/Northern Rockies,40,6,0.2
+Columbia Mountains/Northern Rockies,41,6,0.178
+Columbia Mountains/Northern Rockies,42,6,0.195
+Columbia Mountains/Northern Rockies,43,6,0.12
+Columbia Mountains/Northern Rockies,44,6,0.161
+Columbia Mountains/Northern Rockies,45,6,0.152
+Columbia Mountains/Northern Rockies,46,6,0.108
+Columbia Mountains/Northern Rockies,47,6,0.226
+Columbia Mountains/Northern Rockies,48,6,0.217
+Columbia Mountains/Northern Rockies,49,6,0.223
