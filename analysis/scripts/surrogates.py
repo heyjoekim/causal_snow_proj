@@ -48,14 +48,14 @@ if __name__ == "__main__":
     skills = []
 
     for idx, eco in zip([-1, 5, 8, 10], ['Cascades', 'Eastern Cascades Slopes and Foothills', 'North Cascades', 'Columbia Mountains/Northern Rockies']):
-        df = CCMsetup(idx, pdo)
-        E = embedDimWrapper(df, 'pdo')
+        df = CCMsetup(idx, nino34)
+        E = embedDimWrapper(df, 'ANOM')
         L = len(df)
         maxN = L-(E+1)
-        df = df[['time', 'pdo', 'swe_level2']]
+        df = df[['time', 'ANOM', 'swe_level2']]
 
         s = 50
-        surrogates = SurrogateData(df, column='pdo', method='seasonal', numSurrogates=s)
+        surrogates = SurrogateData(df, column='ANOM', method='seasonal', numSurrogates=s)
         surrogates['swe'] = df['swe_level2']
 
         ccm_surr = pd.DataFrame()
@@ -64,14 +64,14 @@ if __name__ == "__main__":
                 test = CCM(dataFrame=surrogates,
                            E = int(E),
                            seed=30,
-                           tau=-1,
-                           target=['pdo_{}'.format(i+1)],
+                           tau=l,
+                           target=['ANOM_{}'.format(i+1)],
                            columns='swe',
                            libSizes=[15,maxN-1,8],
                            sample=100)
                 ccm_surr = pd.concat([ccm_surr, test], axis=1)
 
-            surr_skill = ccm_surr[['swe:pdo_{}'.format(i+1) for i in range(s)]].mean(axis=1)
+            surr_skill = ccm_surr[['swe:ANOM_{}'.format(i+1) for i in range(s)]].mean(axis=1)
             ecos.append(eco)
             lags.append(np.abs(l))
             skills.append(surr_skill.iloc[-1])
@@ -82,5 +82,5 @@ if __name__ == "__main__":
         'skill': skills
         })
 
-    nino_surr_vals.to_csv('./pdo_surrogates.csv',
+    nino_surr_vals.to_csv('./enso_surrogates.csv',
                           index=False)
