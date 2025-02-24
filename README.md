@@ -1,5 +1,8 @@
 # causal_snow_proj
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.14918947.svg)](https://doi.org/10.5281/zenodo.14918947)
+
+
 GitHub Repository for code to run CCM analysis on HPC cluster.
 Main analysis featured on manuscript are located in `analysis`
 
