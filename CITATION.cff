@@ -13,9 +13,7 @@ authors:
   - family-names: "Tuttle"
     given-names: "Sam"
     orcid:
-title: "Results for <insert paper title here>"
-version:
+title: "Results for Improving Predictions of Snow Resources Using Midlatitude SSTs with Convergent Cross Mapping"
+version: v1.0.0
 doi:
-date-released:
-url:
-
+date-released: 2025-02-24
