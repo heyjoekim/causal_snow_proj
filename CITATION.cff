@@ -1,19 +1,15 @@
 cff-version: 1.2.0
 message: "If you use this data, please cite it as below."
 authors:
-  - family-names: "Kim"
-    given-names: "Haejo"
+  - family-names: Kim
+    given-names: Haejo
     orcid: "https://orcid.org/0009-0001-2892-7997"
-  - family-names: "Fastovich"
-    given-names: "David"
-    orcid:
-  - family-names: "Bhattacharya"
-    given-names: "Tripti"
-    orcid:
-  - family-names: "Tuttle"
-    given-names: "Sam"
-    orcid:
+  - family-names: Fastovich
+    given-names: David
+  - family-names: Bhattacharya
+    given-names: Tripti
+  - family-names: Tuttle
+    given-names: Sam
 title: "Results for Improving Predictions of Snow Resources Using Midlatitude SSTs with Convergent Cross Mapping"
-version: v1.0.1
-doi:
+version: v1.0.2
 date-released: 2025-02-24
